@@ -5,6 +5,26 @@ A Python-based Streamlit web application for fetching and displaying real-time w
 
 In this app, multithreading is implemented to perform multiple background tasks without blocking the main application.
 
+
+## Overall Flow Diagram
+
+```mermaid
+graph LR
+    A[User Input via Steamlit UI] --> B[Producer Fetches Weather Data from OpenWeather API]
+    B --> C[Producer Sends Data to Kafka Topic]
+    C --> D[Consumer Reads Data from Kafka Topic]
+    D --> E[Consumer Writes Data to PostgreSQL Database]
+    E --> F[UI Periodically Fetches and Displays Latest Weather Data]
+
+
+    style A fill:#ffcccc,stroke:#333,stroke-width:5px
+    style B fill:#ffcc99,stroke:#333,stroke-width:5px
+    style C fill:#ffffcc,stroke:#333,stroke-width:5px
+    style D fill:#ccffcc,stroke:#333,stroke-width:5px
+    style E fill:#99ccff,stroke:#333,stroke-width:5px
+    style F fill:#6699ff,stroke:#333,stroke-width:5px
+  
+---
 ## Features
 - **Real-Time Weather Updates**: Fetches live weather data for cities entered by the user.
 - **Dynamic UI**: Displays the latest weather data in real-time with automatic updates.
@@ -122,25 +142,4 @@ Controlled using a global stop_event to gracefully shut down tasks when the app 
 ---
 #Python #Streamlit #ConfluentKafka #PostgreSQL #Pandas #psycopg2 #Multi-threading
 ---
-# Real-Time Weather App: Workflow
 
-## Overall Flow Diagram
-
-```mermaid
-graph LR
-    A[User Input via Steamlit UI] --> B[Producer Fetches Weather Data from OpenWeather API]
-    B --> C[Producer Sends Data to Kafka Topic]
-    C --> D[Kafka Topic: weatherdata_topic]
-    D --> E[Consumer Reads Data from Kafka Topic]
-    E --> F[Consumer Writes Data to PostgreSQL Database]
-    F --> G[UI Periodically Fetches and Displays Latest Weather Data]
-
-
-    style A fill:#ffcccc,stroke:#333,stroke-width:5px
-    style B fill:#ffcc99,stroke:#333,stroke-width:5px
-    style C fill:#ffffcc,stroke:#333,stroke-width:5px
-    style D fill:#ccffcc,stroke:#333,stroke-width:5px
-    style E fill:#99ccff,stroke:#333,stroke-width:5px
-    style F fill:#6699ff,stroke:#333,stroke-width:5px
-    style G fill:#9966ff,stroke:#333,stroke-width:5px
-  
