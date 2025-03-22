@@ -136,16 +136,11 @@ graph LR
     F --> G[UI Periodically Fetches and Displays Latest Weather Data]
 
 
-    style A fill:#ffcccc,stroke:#333,stroke-width:2px
-    style B fill:#ffcc99,stroke:#333,stroke-width:2px
-    style C fill:#ffffcc,stroke:#333,stroke-width:2px
-    style D fill:#ccffcc,stroke:#333,stroke-width:2px
-    style E fill:#99ccff,stroke:#333,stroke-width:2px
-    style F fill:#6699ff,stroke:#333,stroke-width:2px
-    style G fill:#9966ff,stroke:#333,stroke-width:2px
-    style H fill:#cc99ff,stroke:#333,stroke-width:2px
-    style I fill:#ccffff,stroke:#333,stroke-width:2px
-    style J fill:#cccccc,stroke:#333,stroke-width:2px
-    style K fill:#ffffcc,stroke:#333,stroke-width:2px
-    style L fill:#ffccff,stroke:#333,stroke-width:2px
-
+    style A fill:#ffcccc,stroke:#333,stroke-width:3px
+    style B fill:#ffcc99,stroke:#333,stroke-width:3px
+    style C fill:#ffffcc,stroke:#333,stroke-width:3px
+    style D fill:#ccffcc,stroke:#333,stroke-width:3px
+    style E fill:#99ccff,stroke:#333,stroke-width:3px
+    style F fill:#6699ff,stroke:#333,stroke-width:3px
+    style G fill:#9966ff,stroke:#333,stroke-width:3px
+  
