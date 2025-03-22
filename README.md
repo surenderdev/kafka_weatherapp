@@ -120,8 +120,5 @@ All threads operate independently, leveraging Python's threading module.
 Controlled using a global stop_event to gracefully shut down tasks when the app exits.
 
 ---
-
-
-# Technologies Used
-#Python #Streamlit #ConfluentKafka #PostgreSQL #Pandas #psycopg2
+#Python #Streamlit #ConfluentKafka #PostgreSQL #Pandas #psycopg2 #Multi-threading
 ---
