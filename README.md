@@ -4,7 +4,6 @@
 A Python-based Streamlit web application for fetching and displaying real-time weather data. This app integrates Kafka for data streaming, PostgreSQL for database management, and Streamlit for an interactive UI. Users can input a city name to retrieve weather details, which are dynamically displayed in the app.
 
 In this app, multithreading is implemented to perform multiple background tasks without blocking the main application.
-
 ```mermaid
 graph LR
     A[User Input via Streamlit UI] --> B[Producer Fetches Weather Data from OpenWeather API]
@@ -12,7 +11,6 @@ graph LR
     C --> D[Consumer Reads Data from Kafka Topic]
     D --> E[Consumer Writes Data to PostgreSQL Database]
     E --> F[UI Fetches Latest Data and Displays Dynamically]
-
 ---
 ## Features
 - **Real-Time Weather Updates**: Fetches live weather data for cities entered by the user.
