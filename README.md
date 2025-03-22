@@ -10,20 +10,12 @@ In this app, multithreading is implemented to perform multiple background tasks 
 
 ```mermaid
 graph LR
-    A[User Input via Steamlit UI] --> B[Producer Fetches Weather Data from OpenWeather API]
+    A[User Input via Streamlit UI] --> B[Producer Fetches Weather Data from OpenWeather API]
     B --> C[Producer Sends Data to Kafka Topic]
     C --> D[Consumer Reads Data from Kafka Topic]
     D --> E[Consumer Writes Data to PostgreSQL Database]
     E --> F[UI Periodically Fetches and Displays Latest Weather Data]
 
-
-    style A fill:#ffcccc,stroke:#333,stroke-width:5px;
-    style B fill:#ffcc99,stroke:#333,stroke-width:5px;
-    style C fill:#ffffcc,stroke:#333,stroke-width:5px;
-    style D fill:#ccffcc,stroke:#333,stroke-width:5px;
-    style E fill:#99ccff,stroke:#333,stroke-width:5px;
-    style F fill:#6699ff,stroke:#333,stroke-width:5px;
-  
 ---
 ## Features
 - **Real-Time Weather Updates**: Fetches live weather data for cities entered by the user.
