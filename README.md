@@ -1,9 +1,8 @@
 # 🌤️ Real-Time Weather App
 
-## Overview
 A Python-based Streamlit web application for fetching and displaying real-time weather data. This app integrates Kafka for data streaming, PostgreSQL for database management, and Streamlit for an interactive UI. Users can input a city name to retrieve weather details, which are dynamically displayed in the app.
 
-In this app, multithreading is implemented to perform multiple background tasks without blocking the main application.
+## In this app, multithreading is implemented to perform multiple background tasks without blocking the main application.
 ---
 ## Features
 - **Real-Time Weather Updates**: Fetches live weather data for cities entered by the user.
