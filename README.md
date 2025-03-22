@@ -5,6 +5,14 @@ A Python-based Streamlit web application for fetching and displaying real-time w
 
 In this app, multithreading is implemented to perform multiple background tasks without blocking the main application.
 
+```mermaid
+graph LR
+    A[User Input via Streamlit UI] --> B[Producer Fetches Weather Data from OpenWeather API]
+    B --> C[Producer Sends Data to Kafka Topic]
+    C --> D[Consumer Reads Data from Kafka Topic]
+    D --> E[Consumer Writes Data to PostgreSQL Database]
+    E --> F[UI Fetches Latest Data and Displays Dynamically]
+
 ---
 ## Features
 - **Real-Time Weather Updates**: Fetches live weather data for cities entered by the user.
@@ -24,9 +32,7 @@ In this app, multithreading is implemented to perform multiple background tasks 
   - After clicking **"Submit"**, the app triggers backend threads to fetch, process, and display weather data for the city.
 - **Output**:
   - Dynamic UI that refreshes to show the latest weather data retrieved from the database.
-
 ---
-
 ## **2. Source of Data**
 - **API Used**: OpenWeather API.
 - **Details Provided**:
