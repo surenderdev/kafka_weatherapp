@@ -17,12 +17,12 @@ graph LR
     E --> F[UI Periodically Fetches and Displays Latest Weather Data]
 
 
-    style A fill:#ffcccc,stroke:#333,stroke-width:5px
-    style B fill:#ffcc99,stroke:#333,stroke-width:5px
-    style C fill:#ffffcc,stroke:#333,stroke-width:5px
-    style D fill:#ccffcc,stroke:#333,stroke-width:5px
-    style E fill:#99ccff,stroke:#333,stroke-width:5px
-    style F fill:#6699ff,stroke:#333,stroke-width:5px
+    style A fill:#ffcccc,stroke:#333,stroke-width:5px;
+    style B fill:#ffcc99,stroke:#333,stroke-width:5px;
+    style C fill:#ffffcc,stroke:#333,stroke-width:5px;
+    style D fill:#ccffcc,stroke:#333,stroke-width:5px;
+    style E fill:#99ccff,stroke:#333,stroke-width:5px;
+    style F fill:#6699ff,stroke:#333,stroke-width:5px;
   
 ---
 ## Features
