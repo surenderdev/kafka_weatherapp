@@ -125,20 +125,16 @@ Controlled using a global stop_event to gracefully shut down tasks when the app 
 # Real-Time Weather App: Workflow
 
 ## Overall Flow Diagram
-```mermaid
-graph TD
-    A[User Input via UI] --> B[City Name Submitted]
-    B --> C[Fetch Data from OpenWeather API]
-    C --> D[Weather Data Fetched as JSON]
-    D --> E[Kafka Producer Sends Data to Kafka Topic]
-    E --> F[Kafka Topic: weatherdata_topic]
-    F --> G[Kafka Consumer Listens to Topic]
-    G --> H[Consumer Validates and Writes to Database]
-    H --> I[PostgreSQL Database Stores Weather Data]
 
-    I --> J[Periodic Database Fetch Thread]
-    J --> K[Shared Variable: latest_data Updated]
-    K --> L[UI Dynamically Displays Latest Data]
+```mermaid
+graph LR
+    A[User Input via UI] --> B[Producer Fetches Weather Data from OpenWeather API]
+    B --> C[Producer Sends Data to Kafka Topic]
+    C --> D[Kafka Topic: weatherdata_topic]
+    D --> E[Consumer Reads Data from Kafka Topic]
+    E --> F[Consumer Writes Data to PostgreSQL Database]
+    F --> G[UI Periodically Fetches and Displays Latest Weather Data]
+
 
     style A fill:#ffcccc,stroke:#333,stroke-width:2px
     style B fill:#ffcc99,stroke:#333,stroke-width:2px
