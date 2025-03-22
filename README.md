@@ -46,11 +46,5 @@ Controlled using a global stop_event to gracefully shut down tasks when the app 
 ---
 
 ## Technologies Used
-- **Python**: Programming language for backend logic.
-- **Streamlit**: Web application framework for building the UI.
-- **Confluent Kafka**: Data streaming platform for producer-consumer communication.
-- **PostgreSQL**: Database system for storing weather data.
-- **Pandas**: For data manipulation and analysis.
-- **psycopg2**: PostgreSQL database adapter for Python.
-
+#Python #Streamlit #ConfluentKafka #PostgreSQL #Pandas #psycopg2
 ---
