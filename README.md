@@ -128,7 +128,7 @@ Controlled using a global stop_event to gracefully shut down tasks when the app 
 
 ```mermaid
 graph LR
-    A[User Input via UI] --> B[Producer Fetches Weather Data from OpenWeather API]
+    A[User Input via Steamlit UI] --> B[Producer Fetches Weather Data from OpenWeather API]
     B --> C[Producer Sends Data to Kafka Topic]
     C --> D[Kafka Topic: weatherdata_topic]
     D --> E[Consumer Reads Data from Kafka Topic]
@@ -136,11 +136,11 @@ graph LR
     F --> G[UI Periodically Fetches and Displays Latest Weather Data]
 
 
-    style A fill:#ffcccc,stroke:#333,stroke-width:3px
-    style B fill:#ffcc99,stroke:#333,stroke-width:3px
-    style C fill:#ffffcc,stroke:#333,stroke-width:3px
-    style D fill:#ccffcc,stroke:#333,stroke-width:3px
-    style E fill:#99ccff,stroke:#333,stroke-width:3px
-    style F fill:#6699ff,stroke:#333,stroke-width:3px
-    style G fill:#9966ff,stroke:#333,stroke-width:3px
+    style A fill:#ffcccc,stroke:#333,stroke-width:5px
+    style B fill:#ffcc99,stroke:#333,stroke-width:5px
+    style C fill:#ffffcc,stroke:#333,stroke-width:5px
+    style D fill:#ccffcc,stroke:#333,stroke-width:5px
+    style E fill:#99ccff,stroke:#333,stroke-width:5px
+    style F fill:#6699ff,stroke:#333,stroke-width:5px
+    style G fill:#9966ff,stroke:#333,stroke-width:5px
   
