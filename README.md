@@ -8,13 +8,15 @@ In this app, multithreading is implemented to perform multiple background tasks 
 
 ## Overall Flow Diagram
 
+# Horizontal Workflow of Real-Time Weather App
+
 ```mermaid
 graph LR
     A[User Input via Streamlit UI] --> B[Producer Fetches Weather Data from OpenWeather API]
     B --> C[Producer Sends Data to Kafka Topic]
     C --> D[Consumer Reads Data from Kafka Topic]
     D --> E[Consumer Writes Data to PostgreSQL Database]
-    E --> F[UI Periodically Fetches and Displays Latest Weather Data]
+    E --> F[UI Fetches Latest Data and Displays Dynamically]
 
 ---
 ## Features
