@@ -122,3 +122,34 @@ Controlled using a global stop_event to gracefully shut down tasks when the app 
 ---
 #Python #Streamlit #ConfluentKafka #PostgreSQL #Pandas #psycopg2 #Multi-threading
 ---
+# Real-Time Weather App: Workflow
+
+## Overall Flow Diagram
+```mermaid
+graph TD
+    A[User Input via UI] --> B[City Name Submitted]
+    B --> C[Fetch Data from OpenWeather API]
+    C --> D[Weather Data Fetched as JSON]
+    D --> E[Kafka Producer Sends Data to Kafka Topic]
+    E --> F[Kafka Topic: weatherdata_topic]
+    F --> G[Kafka Consumer Listens to Topic]
+    G --> H[Consumer Validates and Writes to Database]
+    H --> I[PostgreSQL Database Stores Weather Data]
+
+    I --> J[Periodic Database Fetch Thread]
+    J --> K[Shared Variable: latest_data Updated]
+    K --> L[UI Dynamically Displays Latest Data]
+
+    style A fill:#ffcccc,stroke:#333,stroke-width:2px
+    style B fill:#ffcc99,stroke:#333,stroke-width:2px
+    style C fill:#ffffcc,stroke:#333,stroke-width:2px
+    style D fill:#ccffcc,stroke:#333,stroke-width:2px
+    style E fill:#99ccff,stroke:#333,stroke-width:2px
+    style F fill:#6699ff,stroke:#333,stroke-width:2px
+    style G fill:#9966ff,stroke:#333,stroke-width:2px
+    style H fill:#cc99ff,stroke:#333,stroke-width:2px
+    style I fill:#ccffff,stroke:#333,stroke-width:2px
+    style J fill:#cccccc,stroke:#333,stroke-width:2px
+    style K fill:#ffffcc,stroke:#333,stroke-width:2px
+    style L fill:#ffccff,stroke:#333,stroke-width:2px
+
