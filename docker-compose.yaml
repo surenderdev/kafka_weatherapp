@@ -11,7 +11,7 @@ services:
 
   kafka:
     image: confluentinc/cp-kafka:latest
-    container_name: kafkaweatherexp1
+    container_name: weather_kafka
     ports:
       - "9092:9092"
     environment:
@@ -33,4 +33,17 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./postgres_data:/var/lib/postgresql/data 
+      - ./postgres_data:/var/lib/postgresql/data
+
+  python-app:
+    build:
+      context: .  # Path to the directory containing the Dockerfile
+    container_name: weather_app
+    ports:
+      - "8501:8501"
+    depends_on:
+      - kafka
+      - postgres
+    environment:
+      - PYTHONUNBUFFERED=1
+

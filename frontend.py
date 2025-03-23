@@ -185,7 +185,7 @@ def main():
         """
     st.markdown(hide_menu_style, unsafe_allow_html=True)
 
-    set_png_as_page_bg(r"asset\backgroundimag1.png")
+    set_png_as_page_bg("asset/backgroundimage1.png")
     st.title("🌤️ Real-Time Weather App")
     global city_name
     city_name = st.text_input("City Name", placeholder="Enter a city name")
