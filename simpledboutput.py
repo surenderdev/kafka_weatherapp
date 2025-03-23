@@ -1,8 +1,6 @@
-import streamlit as st
 import psycopg2
 import pandas as pd
 #from dotenv import load_dotenv
-import os
 import logging
 import pandas as pd
 
