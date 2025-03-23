@@ -120,7 +120,7 @@ def start_consumer():
     """Run the consumer."""
     while not stop_event.is_set():
         consume_weather_data(topicname)
-        time.sleep(3)
+        time.sleep(5)
 
 
 # Background thread to periodically fetch data
@@ -134,7 +134,7 @@ def periodic_data_fetch():
                 latest_data = df  # Safely update the shared variable
         except Exception as e:
             logging.error(f"Error fetching weather data: {e}")
-        time.sleep(10)  # Fetch data every 10 seconds
+        time.sleep(5)  # Fetch data every 10 seconds
 
 def display_weather_data(container):
     """Display the latest fetched weather data in Streamlit."""
