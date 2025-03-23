@@ -23,7 +23,7 @@ producer_conf = {
 }
 '''
 producer_conf = {
-    'bootstrap.servers': 'localhost:9092',
+    'bootstrap.servers': 'kafka:9092',
     }
 producer = Producer(producer_conf)
 

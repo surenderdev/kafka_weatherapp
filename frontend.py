@@ -13,7 +13,7 @@ import logging
 # Global configuration
 timeinterval = 30
 topicname = "weatherdata_topic"
-DB_HOST = "localhost"
+DB_HOST = "postgres"
 DB_PORT = 5432
 DB_NAME = "weather_db"
 DB_USER = "postgres"

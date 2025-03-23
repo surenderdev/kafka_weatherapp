@@ -7,7 +7,7 @@ from datetime import datetime, timezone, timedelta
 import os
 
 # PostgreSQL Configuration
-DB_HOST = "localhost"
+DB_HOST = "postgres"
 DB_PORT = 5432
 DB_NAME = "weather_db"
 DB_USER ="postgres"
@@ -33,7 +33,7 @@ consumer_conf = {
 '''
 
 consumer_conf = {
-    'bootstrap.servers': 'localhost:9092',
+    'bootstrap.servers': 'kafka:9092',
     'group.id': f'weatherdata_group_{os.getpid()}',  # Unique group per run
     'auto.offset.reset': 'earliest',  # Start from beginning
     'enable.auto.commit': False  # Disable auto-commit if needed
