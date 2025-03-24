@@ -6,8 +6,6 @@ https://github.com/surenderdev/kafka_weatherapp/blob/main/asset/demovideo.mp4
 
 ![Demo Video](https://github.com/surenderdev/kafka_weatherapp/blob/main/asset/thumbnail.png)(https://raw.githubusercontent.com/surenderdev/kafka_weatherapp/main/asset/demovideo.mp4)
 
-![Demo Video](https://raw.githubusercontent.com/surenderdev/kafka_weatherapp/main/asset/demovideo.mp4)
-
 
 ## In this app, multithreading is implemented to perform multiple background tasks without blocking the main application.
 ---
