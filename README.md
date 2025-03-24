@@ -1,5 +1,5 @@
 # 🌤️ Real-Time Weather Dashboard
-# Best Example for end to end Dockerized Kafka-Postgres-Streamlit application.
+# Best example for end to end Dockerized Kafka-Postgres-Streamlit application.
 
 A Python-based Streamlit web application for fetching and displaying real-time weather data. This app integrates Kafka for data streaming, PostgreSQL for database management, and Streamlit for an interactive UI. Users can input a city name to retrieve weather details, which are dynamically displayed in the app.
 
