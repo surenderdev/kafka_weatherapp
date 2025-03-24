@@ -1,17 +1,19 @@
 import json
 import logging
 import psycopg2
-from psycopg2 import sql
 from confluent_kafka import Consumer, KafkaException, KafkaError
 from datetime import datetime, timezone, timedelta
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 
 # PostgreSQL Configuration
-DB_HOST = "postgres"
-DB_PORT = 5432
-DB_NAME = "weather_db"
-DB_USER ="postgres"
-DB_PASSWORD = "password"
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = os.getenv('DB_PORT')
+DB_NAME = os.getenv('DB_NAME')
+DB_USER = os.getenv('DB_USER')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
 
 
 logging.basicConfig(
@@ -33,7 +35,7 @@ consumer_conf = {
 '''
 
 consumer_conf = {
-    'bootstrap.servers': 'kafka:9092',
+    'bootstrap.servers': os.getenv('KAFKA_BOOTSTRAP_SERVERS'),
     'group.id': f'weatherdata_group_{os.getpid()}',  # Unique group per run
     'auto.offset.reset': 'earliest',  # Start from beginning
     'enable.auto.commit': False  # Disable auto-commit if needed

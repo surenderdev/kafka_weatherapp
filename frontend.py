@@ -9,15 +9,16 @@ from dotenv import load_dotenv
 from producer import produce_weather_data
 from consumer_db import consume_weather_data
 import logging
+load_dotenv()
 
 # Global configuration
 timeinterval = 30
 topicname = "weatherdata_topic"
-DB_HOST = "postgres"
-DB_PORT = 5432
-DB_NAME = "weather_db"
-DB_USER = "postgres"
-DB_PASSWORD = "password"
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = os.getenv('DB_PORT')
+DB_NAME = os.getenv('DB_NAME')
+DB_USER = os.getenv('DB_USER')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
 
 # Shared resources
 stop_event = threading.Event()
@@ -166,7 +167,6 @@ def start_threads():
 # Main Streamlit application
 def main():
     """Main function for the Streamlit app."""
-    load_dotenv()
     global API_KEY
     API_KEY = os.getenv("API_KEY")
     if not API_KEY:

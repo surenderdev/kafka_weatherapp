@@ -3,6 +3,12 @@ from confluent_kafka import Producer
 import requests
 import logging
 import time
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
 
 # Configure logging
 logging.basicConfig(
@@ -23,7 +29,7 @@ producer_conf = {
 }
 '''
 producer_conf = {
-    'bootstrap.servers': 'kafka:9092',
+    'bootstrap.servers': os.getenv('KAFKA_BOOTSTRAP_SERVERS'),
     }
 producer = Producer(producer_conf)
 
