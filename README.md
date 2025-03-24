@@ -4,6 +4,9 @@ A Python-based Streamlit web application for fetching and displaying real-time w
 
 https://github.com/surenderdev/kafka_weatherapp/blob/main/asset/demovideo.mp4
 
+<div><video controls src="https://user-images.githubusercontent.com/20723919/120432939-99194880-c3b5-11eb-8eea-f4aa424d479f.MP4" muted="false"></video></div>
+
+
 ## In this app, multithreading is implemented to perform multiple background tasks without blocking the main application.
 ---
 ## Features
