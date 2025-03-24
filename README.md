@@ -2,8 +2,6 @@
 
 A Python-based Streamlit web application for fetching and displaying real-time weather data. This app integrates Kafka for data streaming, PostgreSQL for database management, and Streamlit for an interactive UI. Users can input a city name to retrieve weather details, which are dynamically displayed in the app.
 
-https://github.com/surenderdev/kafka_weatherapp/blob/main/asset/demovideo.mp4
-
 ![Demo Video](https://github.com/surenderdev/kafka_weatherapp/blob/main/asset/thumbnail.png)(https://raw.githubusercontent.com/surenderdev/kafka_weatherapp/main/asset/demovideo.mp4)
 
 
